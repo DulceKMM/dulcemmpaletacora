@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <title>DulceM Modelo 3D</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="Paleta-obj" src="https://cdn.glitch.global/33e6d909-c3a6-4f65-ac44-bee11f713381/Paleta.obj"></a-asset-item>
+            <a-asset-item id="Paleta-mtl" src="https://cdn.glitch.global/33e6d909-c3a6-4f65-ac44-bee11f713381/Paleta.mtl?v=1743149222413"></a-asset-item>
+        </a-assets>
+
+        <!-- Modelo 3D -->
+        <a-entity obj-model="obj: #Paleta-obj; mtl: #Paleta-mtl" 
+                  position="0 0 -4" 
+                  scale="0.40 0.40 0.40" 
+                  rotation="0 0 0"
+                  animation__rotation="property: rotation; to: 0 360 0; loop: true; dur: 10500; easing: linear">
+
+        </a-entity>
+
+        <!-- Suelo -->
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="7" height="6" color="#eae1c8"></a-plane>
+        
+        <!-- Cielo -->
+        <a-sky color="#8892c6"></a-sky>
+
+        <!-- Cámara -->
+        <a-camera position="0 3.3 1.80"></a-camera>
+    </a-scene>
+</body>
+</html>
